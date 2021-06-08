@@ -39,6 +39,7 @@ for i in range(len(directory_files)):
     ### Initialises the count variable with a value of zero. Allows access in the wider namespace.
     count_converge = 0
     count_freq = 0
+    loop_count = 0
 
     ### Iterates over the entire file line-by-line to find the "Converged?" regex.
     print("\nBeginning search for convergence...")
@@ -66,6 +67,14 @@ for i in range(len(directory_files)):
            print("Total convergence was NOT achieved :(")
            break       
         
+        ### This is the failsafe code that breaks the loop if it manages to cycle through the entire file without
+        ### finding anything. After 100000 searches the loop will break.
+        elif loop_count == 100000:
+            print("I couldn't find any matches, please check this output manually :(")
+            convergence == "CHECK ME"
+            loop_count == 0
+            break
+
         ### If count = 4 then total convergence is achieved and we print this result. We then break from the while-loop.
         if count_converge == 4:
             print("Total convergence was achieved!")

@@ -9,6 +9,12 @@ This script is free to use for anyone. It just reads through the output files qu
 
 
 ## Version History
+### Version 2.0
+* Abstracted entire code base for easier module manipulation.
+* Tweaked some modules to ensure they run correctly.
+* Re-wrote SCF energy finding loop to accurately find the entire energy.
+
+
 ### Version 1.0
 * Initialised Git repository.
 * Pushed first draft to the repository.

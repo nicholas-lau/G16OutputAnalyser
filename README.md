@@ -9,6 +9,10 @@ This script is free to use for anyone. It just reads through the output files qu
 
 
 ## Version History
+### Version 3.1
+* Added folders used in processing for program to work.
+
+
 ### Version 3.0
 * Fully expanded the main user interface allowing for job selection.
 * Added MiscellaneousFunctions.py to hold any small functions for future DRY-based optimisation.

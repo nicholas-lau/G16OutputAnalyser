@@ -1,5 +1,5 @@
 def zeroPointEnergyCorrection(directory_files):
-    ### Imports to handle regex and csv output.
+    ### Imports to handle regex.
     import re
 
     ### Initialises empty lists which will contain all of the energy and ZPE values.
@@ -19,7 +19,7 @@ def zeroPointEnergyCorrection(directory_files):
         loop_count = 0
 
         ### Iterates over the entire file line-by-line to find the "HF=" regex.
-        print("Finding the energy for the structure...")
+        print("\nFinding the energy for the structure on " + directory_files[i])
         while True:
             log_file = f.readline()
 
@@ -52,12 +52,12 @@ def zeroPointEnergyCorrection(directory_files):
         ### "Sum of electronic and zero-point Energies" in string, if found returns memory address != None. The zero-point corrected energy
         ### is then extracted as a float. If no zero-point corrected energy is found then the output prints the error message and overwrites
         ### the variable with an error message.
-        print("Finding the Zero-Point Corrected Energy...")
+        print("\nFinding the Zero-Point Corrected Energy on " + directory_files[i])
         while True:
             log_file = f.readline()
             
             if re.search("Sum of electronic and zero-point Energies", log_file) != None:
-                print("Zero-point corrected energy was found!\n")
+                print("Zero-point corrected energy was found!")
                 zpe = log_file[45:]
                 zpe = float(zpe.strip())
                 break

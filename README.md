@@ -9,6 +9,12 @@ This script is free to use for anyone. It just reads through the output files qu
 
 
 ## Version History
+### Version 3.0
+* Fully expanded the main user interface allowing for job selection.
+* Added MiscellaneousFunctions.py to hold any small functions for future DRY-based optimisation.
+* Added UV-Vis cleaning tool and made available to access as is.
+
+
 ### Version 2.0
 * Abstracted entire code base for easier module manipulation.
 * Tweaked some modules to ensure they run correctly.

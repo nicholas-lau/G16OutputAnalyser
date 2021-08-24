@@ -1,5 +1,5 @@
 def convergenceTest(directory_files):
-    ### Imports to handle regex and csv output.
+    ### Imports to handle regex.
     import re
 
     ### Initialises empty list which will contain all of the convergence values.
@@ -17,8 +17,7 @@ def convergenceTest(directory_files):
         loop_count = 0
 
         ### Iterates over the entire file line-by-line to find the "Converged?" regex.
-        print("\nBeginning search for convergence...")
-        print(directory_files[i])
+        print("Beginning search for convergence on " + directory_files[i])
         while True:
             log_file = f.readline()
 

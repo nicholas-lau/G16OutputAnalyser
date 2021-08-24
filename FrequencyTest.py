@@ -1,5 +1,5 @@
 def frequencyTest(directory_files):
-    ### Imports to handle regex and csv output.
+    ### Imports to handle regex.
     import re
 
     ### Initialises empty list which will contain all of the frequency values.
@@ -16,7 +16,7 @@ def frequencyTest(directory_files):
         loop_count = 0
 
         ### Iterates over the entire file line-by-line to find the "Frequencies --" regex.
-        print("Determining real and imaginary frequencies...")
+        print("\nDetermining real and imaginary frequencies on " + directory_files[i])
         while True:
             log_file = f.readline()
 
